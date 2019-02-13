@@ -10,44 +10,37 @@ import javax.servlet.http.HttpServletResponse;
 import com.mvc.bean.DeleteNomineesBean;
 import com.mvc.dao.DeleteNomineesDao;
 
-
-
-/**
- * Servlet implementation class Delete_Author_Servlet
- */
+//annotation instead of using xml
 @WebServlet("/DeleteNominees")
 public class DeleteNominees extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-      
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	
-		String nomineename=request.getParameter("nomineename");
-		System.out.println("in servlet"+nomineename);
+
+		// getting the parameters
+		String nomineename = request.getParameter("nomineename");
+
+		// creating object for deletenomineebean
 		DeleteNomineesBean nomineeBean = new DeleteNomineesBean();
 
-		System.out.println(" before"+nomineename);
 		nomineeBean.setNomineeName(nomineename);
-		System.out.println("after");
+		// creating object for DeleteNomoineesdao
 		DeleteNomineesDao userdao = new DeleteNomineesDao();
-		System.out.println("123");
+
 		String userRegistered = userdao.nomineename(nomineeBean);
-		System.out.println(userRegistered);
-		if (userRegistered.equals("SUCCESS")) // On success, you can display a message to user on Home page
-		{
-			System.out.println("in if");
-			//request.setAttribute("Admin_Menu", true);
+
+		// On success, you can display a message to user on Admin Page
+		if (userRegistered.equals("SUCCESS")) {
 
 			request.getRequestDispatcher("/AdminPage.jsp").forward(request, response);
-		} else // On Failure, display a meaningful message to the User.
-		{
-			System.out.println("in else");
-			
+		}
+		// On Failure, display a meaningful message to the User.
+		else {
+
 			request.setAttribute("errMessage", userRegistered);
 			request.getRequestDispatcher("/DeleteNominees.jsp").forward(request, response);
 		}
 	}
-	}
-
-
+}

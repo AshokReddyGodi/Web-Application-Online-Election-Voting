@@ -60,7 +60,7 @@ font-size:40px;
 
 
 .footer {
-    width: 1727px;
+    width: 1743px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
@@ -140,8 +140,9 @@ margin-left:40%;
                                 <%--Html--%>
                        
 <body>
+<%--Navigation--%>
       <div class="navbar">
-              <a href="HomePage.jsp">Home</a>
+              <a href="index.jsp">Home</a>
               <a href="About.jsp">About</a>
               <a href="Gallery.jsp">Gallery</a>
               <a href="VotersLogin.jsp">Voters Login</a>
@@ -152,7 +153,7 @@ margin-left:40%;
         </div>
         </div>    
        
-  
+  <%--Header--%>
 <div class="header"><br>
          <img class="myImage" src="Images\sreerama logo.png" width="750px" height="250px"alt="pics" style="width:20%"><br><br><br>
 <marquee class="scrollmarq">Welcome To Online Election Voting for Sreerama Engineering College</marquee>
@@ -168,7 +169,7 @@ margin-left:40%;
    style="width:100%">
 </section>
 
-
+<%--Footer--%>
 <div class="footer"><br><br><br>
  <div class ="centeralign">
   <a href="https://en-gb.facebook.com/r.php?locale=en_GB" class="fa fa-facebook"></a>

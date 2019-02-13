@@ -11,6 +11,7 @@ public class VotingPageDao {
 
 	public String nomineesregisterUser(VotingPage1Bean nomineesregisterBean) {
 
+		// Keeping user entered values in temporary variables.
 		String nominees = nomineesregisterBean.getNominees();
 
 		Connection con = null;
@@ -25,8 +26,6 @@ public class VotingPageDao {
 			preparedstatement = con.prepareStatement(query);
 
 			preparedstatement.setString(1, nominees);
-
-			System.out.println(nominees);
 
 			int i = preparedstatement.executeUpdate();
 

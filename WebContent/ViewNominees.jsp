@@ -6,13 +6,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 
 <%@page
-	import="com.mvc.dao.NomineesRegisterDao,com.mvc.bean.NomineesRegisterBean,com.mvc.util.DBConnection"%>
+import="com.mvc.dao.NomineesRegisterDao,com.mvc.bean.NomineesRegisterBean,com.mvc.util.DBConnection"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Online Election Voting</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                             <%--Css--%>
 <style>
 
 
@@ -79,7 +81,7 @@ th {
 }
 
 .footer {
-    width: 1735px;
+    width: 1743px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; 
@@ -159,8 +161,10 @@ top-margin:20%;
 
 </style>
 </head>
+
+                                        <%--Html--%>
 <body>
- 
+ <%--Header--%>
 <div class="header">
 <button type="button" class="backbutton" onClick="window.location.href='AdminPage.jsp'"><b>Back</b></button><br><br><br>
 <img class="myImage" src="Images\sreerama logo.png" width="750px" height="250px"alt="pics" style="width:20%"><br><br><br>
@@ -195,7 +199,7 @@ select nomineename,gender,age,description  from nominees
 		</c:forEach>
 	</table>
 
-	
+	<%--Footer--%>
 <div class="footer"><br><br><br>
 
  <div class ="centeralign">

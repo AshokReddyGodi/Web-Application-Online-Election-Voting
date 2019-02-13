@@ -7,7 +7,7 @@
 <title>Online Election Voting</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+                                         <%--Css--%>
 <style>
 * {
 	box-sizing: border-box;
@@ -70,8 +70,8 @@ font-size:40px;
 
 
 .footer {
-    width: 1727px;
-    height: 350px;
+    width: 1743px;
+    height: 320px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; 
     animation: mymove 5s infinite;
@@ -95,11 +95,9 @@ font-size:40px;
   width: 50px;
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
-  
-
-  
+  border-radius: 50%; 
 }
+
 .fa:hover {
     opacity: 0.7;
 }
@@ -149,6 +147,7 @@ top-margin:20%;
 
 </style>
 
+                                    <%--Javascript--%>
 <script>
 if(${adminpage == 'true'}){
 	  alert("Welcome, You are Successfully logged in...");
@@ -159,9 +158,12 @@ if(${adminpg == 'true'}){
 	}		
 </script>
 </head>
-<%--Html--%>
+                                      
+                                      <%--Html--%>
 
 <body>
+
+<%--Navigation bar--%>
 	<div class="navbar">
 		
 		 <a href="NomineesRegister.jsp">Add Nominees</a> 
@@ -172,10 +174,11 @@ if(${adminpg == 'true'}){
 		  <a href="DeleteVoters.jsp">Delete Voters</a>
 		   
 		<div class="topnav-right">
-			<a href="HomePage.jsp">Logout</a>
+			<a href="index.jsp" onclick="alert('Do you want to logout, please click on Ok....')">Logout</a>
 		</div>
 	</div>
 
+<%--Header--%>
 <div class="header">
 <button type="button" class="backbutton" onClick="window.location.href='AdminLogin.jsp'"><b>Back</b></button><br><br>		
 <h1 align="center" class="adminalign"> Welcome To Admin Page</h1>
@@ -183,6 +186,7 @@ if(${adminpg == 'true'}){
 <marquee class="scrollmarq">Welcome To Online Election Voting for Sreerama Engineering College</marquee>
 </div>
 	
+<%--Footer--%>
 <div class="footer"><br><br><br>
  <div class ="centeralign">
   <a href="https://en-gb.facebook.com/r.php?locale=en_GB" class="fa fa-facebook"></a>

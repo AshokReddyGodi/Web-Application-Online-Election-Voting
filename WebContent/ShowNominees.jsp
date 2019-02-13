@@ -14,6 +14,7 @@
 <title>Online Election Voting</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+                                      <%--Css--%>
 <style>
 
 .submitbtn {
@@ -72,7 +73,7 @@ font-size:40px;
 }
 
 .footer {
-    width: 1734px;
+    width: 1748px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; 
@@ -152,9 +153,11 @@ top-margin:20%;
 
 </head>
 
+                                           <%--Html--%>
 <body>
+<%--Header--%>
 <div class="header">
-<button type="button" class="backbutton" onClick="window.location.href='HomePage.jsp'"><b>Back</b></button><br>
+<button type="button" class="backbutton" onClick="window.location.href='index.jsp'"><b>Back</b></button><br>
 
 <img class="myImage" src="Images\sreerama logo.png" width="750px" height="250px"alt="pics" style="width:20%"><br><br><br>
 <marquee class="scrollmarq">Welcome To Online Election Voting for Sreerama Engineering College</marquee>
@@ -187,7 +190,7 @@ select nomineename,gender,age,description  from nominees
 		</c:forEach>
 	</table>
 
-	
+	<%--Footer--%>
 <div class="footer"><br><br><br>
 
  <div class ="centeralign">

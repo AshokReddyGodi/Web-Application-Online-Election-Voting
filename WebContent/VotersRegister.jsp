@@ -7,6 +7,7 @@
 <title>Online Election Voting</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+                                     <%--Css--%>
 <style>
 
 * {
@@ -28,7 +29,7 @@ font-size:40px;
 
 
 .footer {
-    width: 1727px;
+    width: 1743px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; 
@@ -254,7 +255,8 @@ button:hover {
 
 </style>
 
-<script>/*javascript*/
+                                      <%--Javascript--%>
+<script>
 
 function validate()
 { 
@@ -323,9 +325,11 @@ if(${vtrrgstr == 'false'}){
 </script>
 
 </head>
+
+                                        <%--Html--%>
 <body>
 
-	<%--Html--%>
+	<%--Header--%>
 <div class ="header"><br><br>
 
          <img class="myImage" src="Images\sreerama logo.png" width="750px" height="250px"alt="pics" style="width:20%"><br><br><br>
@@ -341,13 +345,15 @@ if(${vtrrgstr == 'false'}){
 			<hr>
 
 			<label for="Student Id"><b>Student Id</b></label> <input type="text"
-				placeholder="Enter Student Id" name="studentid"> <label
-				for="Student Name"><b>Student Name</b></label> <input type="text"
-				placeholder="Enter Student Name" name="studentname"> <br>
-			<br> <label for="Gender"><b>Gender</b></label> <input
-				type="radio" placeholder="gender" name="gender" value="male">Male</input>
+				placeholder="Enter Student Id" name="studentid"> 
+				
+				<label for="Student Name"><b>Student Name</b></label> 
+				<input type="text" placeholder="Enter Student Name" name="studentname">
+			
+			 <label for="Gender"><b>Gender</b></label> <input type="radio" placeholder="gender" name="gender" value="male">Male</input>
 			<input type="radio" placeholder="gender" name="gender" value="Female">Female<br>
-			<br> <label for="Department" name="depart"><b>Department</b></label>
+			<br> 
+			<label for="Department" name="depart"><b>Department</b></label>
 			<select name="department">
 				<option>CHOOSE BRANCH</option>
 				<option>ECE</option>
@@ -355,7 +361,9 @@ if(${vtrrgstr == 'false'}){
 				<option>EEE</option>
 				<option>MECHANICAL</option>
 				<option>CIVIL</option>
-			</select><br> <br> <label for="Year" name="y"><b>Year</b></label> <select
+			</select><br> <br> 
+			
+		<label for="Year" name="y"><b>Year</b></label> <select
 				name="year">
 				<option>CHOOSE YEAR</option>
 				<option><sub>1st</sub> year
@@ -366,12 +374,13 @@ if(${vtrrgstr == 'false'}){
 				</option>
 				<option><sub>4th</sub> year
 				</option>
-			</select><br> <br> <label for="Password"><b>Password</b></label> <input
-				type="password" placeholder="Enter password" name="Password">
+			</select><br> <br>
+			
+	   <label for="Password"><b>Password</b></label> 
+	   <input type="password" placeholder="Enter password" name="Password">
 
-			<label for="Repeat Password"><b>Repeat Password</b></label> <input
-				type="password" placeholder="Enter Repeat Password"
-				name="repeatpassword">
+			<label for="Repeat Password"><b>Repeat Password</b></label> 
+			<input type="password" placeholder="Enter Repeat Password" name="repeatpassword">
 
 			<%=(request.getAttribute("errMessage") == null) ? "" : request.getAttribute("errMessage")%>
 
@@ -381,6 +390,8 @@ if(${vtrrgstr == 'false'}){
 	</div>
 	</form>
 	</div>
+	
+	<%--Footer--%>
 <div class="footer"><br><br><br>
 
  <div class ="centeralign">

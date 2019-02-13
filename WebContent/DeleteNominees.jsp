@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Online Election Voting</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+             
+                                     <%--Css--%>
 <style>
 
 * {
@@ -83,7 +85,7 @@ button:hover {
 }
 
 .footer {
-    width: 1727px;
+    width: 1743px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
@@ -172,6 +174,7 @@ top-margin:20%;
 </style>
 </head>
 
+                                          <%--Html--%>
 <body>
 <%! String driverName = "oracle.jdbc.driver.OracleDriver";%>
 <%!String url = "jdbc:oracle:thin:@localhost:1521:orcl";%>
@@ -232,6 +235,8 @@ top-margin:20%;
 
 	</form>
 
+
+<%--Footer--%>
 <div class="footer"><br><br><br>
  <div class ="centeralign">
   <a href="https://en-gb.facebook.com/r.php?locale=en_GB" class="fa fa-facebook"></a>

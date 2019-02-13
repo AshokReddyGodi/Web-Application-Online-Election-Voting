@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+                                       <%--css--%>
 <style>                      
 
 * {box-sizing: border-box;
@@ -43,6 +44,7 @@ align:center;
 background-color:green;
 float: left;
 font-size: 25px;
+color:white;
 }
 
 .myImage{
@@ -59,7 +61,7 @@ font-size:40px;
 
 
 .footer {
-    width: 1727px;
+    width: 1743px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
@@ -135,12 +137,14 @@ margin-left:40%;
 }
 </style>
 </head>
-<%--Html--%>
+
+                                   <%--Html--%>
 
 <body>
 
+<%--header--%>
 <div class="header">
-<button type="button" class="backbutton" onClick="window.location.href='HomePage.jsp'"><b>Back</b></button><br><br>
+<button type="button" class="backbutton" onClick="window.location.href='index.jsp'"><b>Back</b></button><br><br>
  <img class="myImage" src="Images\sreerama logo.png" width="750px" height="250px"alt="pics" style="width:20%"><br><br><br>
 <marquee class="scrollmarq">Welcome To Online Election Voting for Sreerama Engineering College</marquee>
 </div>
@@ -192,8 +196,6 @@ margin-left:40%;
 		<br>
 </div>
 
-
-
 		<marquee>
 			<img src="Images\building.jpg" width="750px" height="250px"
 				alt="sreerama img"> 
@@ -209,7 +211,7 @@ margin-left:40%;
 		</marquee>
 
 
-
+<%--Footer--%>
 <div class="footer"><br><br><br>
 
  <div class ="centeralign">

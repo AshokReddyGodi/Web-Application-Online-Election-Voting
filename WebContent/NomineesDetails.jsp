@@ -14,6 +14,7 @@
 <title>Online Election Voting</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+                                   <%--Css--%>
 <style>
 
 table, th, td {
@@ -75,7 +76,7 @@ font-size:40px;
 
 
 .footer {
-    width: 1735px;
+    width: 1743px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; 
@@ -153,8 +154,10 @@ top-margin:20%;
 
 </head>
 
+                                      <%--Html--%>
 <body>
 	
+	<%--Footer--%>
 <div class="header">
 <button type="button" class="backbutton" onClick="window.location.href='VotersLogin.jsp'"><b>Back</b></button><br><br>
 <button type="button" class="submitbutn" onClick="window.location.href='VotingPage1.jsp'">
@@ -193,7 +196,7 @@ select nomineename,gender,age,description  from nominees
 		</c:forEach>
 	</table>
 
-
+<%--Footer--%>
 <div class="footer"><br><br><br>
 
  <div class ="centeralign">
@@ -211,6 +214,7 @@ select nomineename,gender,age,description  from nominees
 </body>
 </html>
 
+                                      <%--Javascript--%>
 <script>
 
 if(${Voting == 'true'}){

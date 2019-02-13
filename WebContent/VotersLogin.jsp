@@ -7,7 +7,7 @@
 <title>Online Election Voting</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<%--CSS--%>
+                                        <%--CSS--%>
 
 <style>
 * {
@@ -126,7 +126,7 @@ text-decoration:none;
 
 
 .footer {
-    width: 1727px;
+    width: 1743px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; 
@@ -205,6 +205,7 @@ top-margin:20%;
 }
 </style>
 
+                                             <%--Javascript--%>
 <script>
 function validate()
 { 
@@ -234,11 +235,10 @@ if(${Votrlgn == 'false'}){
 	}
 	</script>	
 </head>
+
+                                       <%--Html--%>
 <body>
-
-	<%--Html--%>
-
- 
+<%--Header--%>
 <div class="header"><br><br>
          <img class="myImage" src="Images\sreerama logo.png" width="750px" height="250px"alt="pics" style="width:20%"><br><br><br>
 <marquee class="scrollmarq">Welcome To Online Election Voting for Sreerama Engineering College</marquee>
@@ -257,7 +257,7 @@ if(${Votrlgn == 'false'}){
 
 			<button type="submit" class="loginbtn">Login</button>
 			<button type="button" class="cancelbtn"
-				onClick="window.location.href='HomePage.jsp'">Cancel</button>
+				onClick="window.location.href='index.jsp'">Cancel</button>
 			<p>
 				<h2>Not yet registered,</h2><a href="VotersRegister.jsp"><div class="color">Click here</div></a>
 			</p>
@@ -265,7 +265,7 @@ if(${Votrlgn == 'false'}){
 
 	</form>
 
-
+<%--Footer--%>
 <div class="footer"><br><br><br>
 
  <div class ="centeralign">

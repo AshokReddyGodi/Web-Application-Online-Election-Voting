@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Online Election Voting</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                                   <%--Css--%>
 <style>
 
 * {
@@ -87,7 +89,7 @@ button:hover {
 }
 
 .footer {
-    width: 1727px;
+    width: 1743px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; 
@@ -178,17 +180,19 @@ top-margin:20%;
 }
 </style>
 </head>
+
+                                          <%--Html--%>
 <body>
 <%! String driverName = "oracle.jdbc.driver.OracleDriver";%>
 <%!String url = "jdbc:oracle:thin:@localhost:1521:orcl";%>
 <%!String user = "webuser";%>
 <%!String psw = "webuser";%>
 	
+	<%--Header--%>
 <div class="header"><br><br>
    <img class="myImage"src="Images\sreerama logo.png" width="750px" height="250px"alt="pics" style="width:20%"><br><br><br>
 <marquee class="scrollmarq">Welcome To Online Election Voting for Sreerama Engineering College</marquee>
 </div>
-
 
 
 	<form name="form" action="DeleteVoters" method="post"
@@ -241,6 +245,7 @@ top-margin:20%;
 		</div>
 	</form>
 
+<%--Footer--%>
 <div class="footer"><br><br><br>
  
  <div class ="centeralign">

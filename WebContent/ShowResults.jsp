@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<%--CSS--%>
+                                       <%--CSS--%>
 
 <style>
 * {
@@ -83,7 +83,7 @@ font-size:40px;
 }
 
 .footer {
-    width: 1734px;
+    width: 1743px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
@@ -173,10 +173,10 @@ top-margin:20%;
 </head>
 <body>
 
-	<%--Html--%>
+	                                          <%--Html--%>
 <body>
 
-
+<%--Header--%>
 <div class="header">
 <button type="button" class="backbutton"
 			onClick="window.location.href='AdminPage.jsp'">
@@ -209,7 +209,7 @@ select nominees, count(*) from result group by nominees order by count(*) desc
 		</c:forEach>
 	</table>
 
-
+<%--Footer--%>
 <div class="footer"><br><br><br>
 
  <div class ="centeralign">

@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.mvc.bean.NomineesRegisterBean;
 import com.mvc.dao.NomineesRegisterDao;
 
+//annotations instead of using xml
 @WebServlet("/NomineesRegister")
 public class NomineesRegister extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	// constructor
 	public NomineesRegister() {
 		super();
 
@@ -22,6 +24,7 @@ public class NomineesRegister extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		// getting parameters
 		String nomineeid = request.getParameter("nomineeid");
 		String nomineename = request.getParameter("nomineename");
 		String gender = request.getParameter("gender");
@@ -30,8 +33,10 @@ public class NomineesRegister extends HttpServlet {
 		String password = request.getParameter("password");
 		String description = request.getParameter("description");
 
+		// creating object for nomineesregisterbean
 		NomineesRegisterBean nomineesregisterBean = new NomineesRegisterBean();
 
+		// setting the values
 		nomineesregisterBean.setNomineeId(nomineeid);
 		nomineesregisterBean.setNomineeName(nomineename);
 		nomineesregisterBean.setGender(gender);
@@ -40,17 +45,20 @@ public class NomineesRegister extends HttpServlet {
 		nomineesregisterBean.setPassword(password);
 		nomineesregisterBean.setDescription(description);
 
+		// creating object for nomineesregisteredao
 		NomineesRegisterDao nomineesregisterDao = new NomineesRegisterDao();
 
 		String userRegistered = nomineesregisterDao.nomineesregisterUser(nomineesregisterBean);
-		if (userRegistered.equals("SUCCESS")) // On success, you can display a message to user on Home page
-		{
+
+		// On success, you can display a message to user on Admin Page
+		if (userRegistered.equals("SUCCESS")) {
 
 			request.setAttribute("adminpg", true);
 
 			request.getRequestDispatcher("/AdminPage.jsp").forward(request, response);
-		} else // On Failure, display a meaningful message to the User.
-		{
+		}
+		// On Failure, display a meaningful message to the User.
+		else {
 			request.setAttribute("nomineeesrgstr", false);
 			request.setAttribute("errMessage", userRegistered);
 			request.getRequestDispatcher("/NomineesRegister.jsp").forward(request, response);

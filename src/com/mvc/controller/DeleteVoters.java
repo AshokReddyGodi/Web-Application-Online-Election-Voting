@@ -10,44 +10,37 @@ import javax.servlet.http.HttpServletResponse;
 import com.mvc.bean.DeleteVotersBean;
 import com.mvc.dao.DeleteVotersDao;
 
-
-
-/**
- * Servlet implementation class Delete_Author_Servlet
- */
+//annotations instead of using xml
 @WebServlet("/DeleteVoters")
 public class DeleteVoters extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-      
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	
-		String studentname=request.getParameter("studentname");
-		System.out.println("in servlet"+studentname);
+
+		// getting parameters
+		String studentname = request.getParameter("studentname");
+
+		// creating object Deletevoterbean
 		DeleteVotersBean voterBean = new DeleteVotersBean();
 
-		System.out.println(" before"+studentname);
 		voterBean.setStudentName(studentname);
-		System.out.println("after");
+
+		// creating object for DeleteVoterDao
 		DeleteVotersDao userdao = new DeleteVotersDao();
-		System.out.println("123");
+
 		String userRegistered = userdao.studentname(voterBean);
-		System.out.println(userRegistered);
-		if (userRegistered.equals("SUCCESS")) // On success, you can display a message to user on Home page
-		{
-			System.out.println("in if");
-			//request.setAttribute("Admin_Menu", true);
+
+		// On success, you can display a message to user on Admin Page
+		if (userRegistered.equals("SUCCESS")) {
 
 			request.getRequestDispatcher("/AdminPage.jsp").forward(request, response);
-		} else // On Failure, display a meaningful message to the User.
-		{
-			System.out.println("in else");
-			
+		}
+		// On Failure, display a meaningful message to the User.
+		else {
 			request.setAttribute("errMessage", userRegistered);
 			request.getRequestDispatcher("/DeleteVoters.jsp").forward(request, response);
 		}
 	}
-	}
-
-
+}

@@ -9,7 +9,9 @@ import com.mvc.util.DBConnection;
 
 public class AdminLoginDao {
 	public String authenticateUser(AdminLoginBean adminloginBean) {
-		String userName = adminloginBean.getUserName(); // Keeping user entered values in temporary variables.
+
+		// Keeping user entered values in temporary variables.
+		String userName = adminloginBean.getUserName();
 		String password = adminloginBean.getPassword();
 
 		Connection con = null;
@@ -19,34 +21,30 @@ public class AdminLoginDao {
 		String passwordDB = "";
 
 		try {
-			con = DBConnection.createConnection(); // establishing connection
-			statement = con.createStatement(); // Statement is used to write queries. Read more about it.
-			resultSet = statement.executeQuery("select * from admin where username= '" + userName + "'"); // Here table
-																											// name is
-																											// users and
-																											// userName,password
-																											// are
-																											// columns.
-																											// fetching
-																											// all the
-																											// records
-																											// and
-																											// s																									// in a
-																											// resultSet.
-			while (resultSet.next()) // Until next row is present otherwise it return false
-			{
-				userNameDB = resultSet.getString("username"); // fetch the values present in database
+			// establishing connection
+			con = DBConnection.createConnection();
+			// Statement is used to write queries.
+			statement = con.createStatement();
+
+			resultSet = statement.executeQuery("select * from admin where username= '" + userName + "'");
+			// Here table name is users and userName,password are columns.fetching all the
+			// records and in a resultSet. Until next row is present otherwise it return
+			// false
+			while (resultSet.next()) {
+				// fetch the values present in database
+				userNameDB = resultSet.getString("username");
 				passwordDB = resultSet.getString("password");
 
+				//// If the user entered values are already present in database, which means
+				//// user has already registered so I will return SUCCESS message.
 				if (userName.equals(userNameDB) && password.equals(passwordDB)) {
-					return "SUCCESS"; //// If the user entered values are already present in database, which means
-										//// user has already registered so I will return SUCCESS message.
+					return "SUCCESS";
 				}
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
-		return "Invalid user credentials...."; // Just returning appropriate message otherwise
+		// Just returning appropriate message otherwise
+		return "Invalid user credentials....";
 	}
 }

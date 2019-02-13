@@ -7,7 +7,7 @@
 <title>Online Election Voting</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<%--CSS--%>
+                                       <%--CSS--%>
 
 <style>
 * {
@@ -52,9 +52,16 @@ margin-left:40%;
 font-size:40px;   
 }
 
+.topnav-right {
+background-color: White;
+	float: right;
+	font-size: 30px;
+	color:black;
+	text-decoration:none;
+}
 
 .footer {
-    width: 1727px;
+    width: 1743px;
     height: 250px;
     background:lightblue;
     -webkit-animation: mymove 5s infinite;
@@ -133,30 +140,25 @@ margin-left:40%;
 
 </head>
 
-
+                                         <%--Html--%>
 <body>	
-
+<%--Header--%>
 <div class="header">
-<button type="button" class="backbutton"
-			onClick="window.location.href='HomePage.jsp'">
-			<b>Back</b>
-		</button>
-		<button type="button" class="submitbutn"
-			onClick="window.location.href='HomePage.jsp'">
-			<b>Logout</b>
+<button type="button" class="backbutton" onClick="window.location.href='VotingPage1.jsp'"><b>Back</b>
 		</button><br><br>
-
-         <img class="myImage" src="Images\sreerama logo.png" width="750px" height="250px"alt="pics" style="width:20%"><br><br><br>
+		<div class="topnav-right">
+			<a href="index.jsp" onclick="alert('Do you want to logout, please click on OK....')">Logout</a>
+		</div>
+   <img class="myImage" src="Images\sreerama logo.png" width="750px" height="250px"alt="pics" style="width:20%"><br><br><br>
 <marquee class="scrollmarq">Welcome To Online Election Voting for Sreerama Engineering College</marquee>
 </div><br><br><br>
-
 
 	<div class="wish">
 		<h1 class="txt">Your Vote is Successfully done.....</h1>
 		<h1 class="txt">Thank you....</h1>
 	</div><br><br><br>
 
-	
+	<%--Footer--%>
 <div class="footer"><br><br><br>
 
  <div class ="centeralign">

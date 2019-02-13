@@ -9,6 +9,8 @@ import com.mvc.util.DBConnection;
 public class VoterRegisterDao {
 
 	public String voterregisterUser(VotersRegisterBean votersregisterBean) {
+
+		// Keeping user entered values in temporary variables.
 		String studentid = votersregisterBean.getStudentId();
 		String studentname = votersregisterBean.getStudentName();
 		String gender = votersregisterBean.getGender();

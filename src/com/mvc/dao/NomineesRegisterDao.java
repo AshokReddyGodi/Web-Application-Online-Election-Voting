@@ -12,7 +12,7 @@ public class NomineesRegisterDao {
 	public String nomineesregisterUser(NomineesRegisterBean nomineesregisterBean)
 
 	{
-
+		// Keeping user entered values in temporary variables.
 		String nomineeid = nomineesregisterBean.getNomineeId();
 		String nomineename = nomineesregisterBean.getNomineeName();
 		String gender = nomineesregisterBean.getGender();

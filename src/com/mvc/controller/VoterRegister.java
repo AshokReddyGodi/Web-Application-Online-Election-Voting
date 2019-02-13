@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.mvc.bean.VotersRegisterBean;
 import com.mvc.dao.VoterRegisterDao;
 
+//annotations instead of using xml
 @WebServlet("/VoterRegister")
 public class VoterRegister extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	// constructor
 	public VoterRegister() {
 		super();
 
@@ -22,6 +24,7 @@ public class VoterRegister extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		// getting parameters
 		String studentid = request.getParameter("studentid");
 		String studentname = request.getParameter("studentname");
 		String gender = request.getParameter("gender");
@@ -30,8 +33,10 @@ public class VoterRegister extends HttpServlet {
 		String Password = request.getParameter("Password");
 		String repeatpassword = request.getParameter("repeatpassword");
 
+		// creating object for votersregisterbean
 		VotersRegisterBean votersregisterBean = new VotersRegisterBean();
 
+		// setting the values
 		votersregisterBean.setStudentId(studentid);
 		votersregisterBean.setStudentName(studentname);
 		votersregisterBean.setGender(gender);
@@ -40,17 +45,19 @@ public class VoterRegister extends HttpServlet {
 		votersregisterBean.setPassword(Password);
 		votersregisterBean.setRepeatPassword(repeatpassword);
 
+		// creating the object for voterregisterdao
 		VoterRegisterDao voterregisterDao = new VoterRegisterDao();
 
 		String userRegistered = voterregisterDao.voterregisterUser(votersregisterBean);
 
-		if (userRegistered.equals("SUCCESS")) // On success, you can display a message to user on Home page
-		{
+		// On success, you can display a message to user on Voterslogin
+		if (userRegistered.equals("SUCCESS")) {
 
 			request.setAttribute("vtrlogin", true);
 			request.getRequestDispatcher("/VotersLogin.jsp").forward(request, response);
-		} else // On Failure, display a meaningful message to the User.
-		{
+		}
+		// On Failure, display a meaningful message to the User.
+		else {
 			request.setAttribute("vtrrgstr", false);
 			request.setAttribute("errMessage", userRegistered);
 			request.getRequestDispatcher("/VotersRegister.jsp").forward(request, response);
